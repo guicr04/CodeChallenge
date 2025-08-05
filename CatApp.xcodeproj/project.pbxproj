@@ -11,8 +11,19 @@
 		1905B8292E41320900CBD6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1905B8232E41320900CBD6EE /* Assets.xcassets */; };
 		1905B8302E41324000CBD6EE /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905B82F2E41323E00CBD6EE /* CatListView.swift */; };
 		1905B8322E4139AD00CBD6EE /* CatTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905B8312E4139AD00CBD6EE /* CatTileView.swift */; };
-		1905B8342E4141F300CBD6EE /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905B8332E4141EC00CBD6EE /* Breed.swift */; };
 		1905B8362E41439D00CBD6EE /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905B8352E41439300CBD6EE /* BreedListViewModel.swift */; };
+		19BB0C5F2E424CE400AF151E /* CatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */; };
+		19BB0C612E42539200AF151E /* BreedDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C602E42538A00AF151E /* BreedDetailSheet.swift */; };
+		19BB0C692E42919400AF151E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C682E42918F00AF151E /* APIConstants.swift */; };
+		19BB0C6C2E4291BE00AF151E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C6B2E4291BA00AF151E /* APIManager.swift */; };
+		19BB0C6E2E4291F100AF151E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C6D2E4291EE00AF151E /* NetworkError.swift */; };
+		19BB0C702E42920700AF151E /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C6F2E42920400AF151E /* RequestManager.swift */; };
+		19BB0C742E42924E00AF151E /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C732E42924B00AF151E /* DataParser.swift */; };
+		19BB0C772E42928700AF151E /* CatsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C762E42928400AF151E /* CatsRequest.swift */; };
+		19BB0C792E4292BF00AF151E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C782E4292BB00AF151E /* RequestType.swift */; };
+		19BB0C7B2E4292CD00AF151E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C7A2E4292C900AF151E /* RequestProtocol.swift */; };
+		19BB0C7F2E42931800AF151E /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C7E2E42931700AF151E /* Cat.swift */; };
+		19BB0C812E42947B00AF151E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C802E42947700AF151E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +51,19 @@
 		1905B8242E41320900CBD6EE /* CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApp.swift; sourceTree = "<group>"; };
 		1905B82F2E41323E00CBD6EE /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		1905B8312E4139AD00CBD6EE /* CatTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTileView.swift; sourceTree = "<group>"; };
-		1905B8332E4141EC00CBD6EE /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		1905B8352E41439300CBD6EE /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
+		19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIService.swift; sourceTree = "<group>"; };
+		19BB0C602E42538A00AF151E /* BreedDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailSheet.swift; sourceTree = "<group>"; };
+		19BB0C682E42918F00AF151E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		19BB0C6B2E4291BA00AF151E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		19BB0C6D2E4291EE00AF151E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		19BB0C6F2E42920400AF151E /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		19BB0C732E42924B00AF151E /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		19BB0C762E42928400AF151E /* CatsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRequest.swift; sourceTree = "<group>"; };
+		19BB0C782E4292BB00AF151E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		19BB0C7A2E4292C900AF151E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		19BB0C7E2E42931700AF151E /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		19BB0C802E42947700AF151E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -105,9 +127,11 @@
 		1905B8262E41320900CBD6EE /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
-				1905B82A2E41321200CBD6EE /* Breeds */,
-				1905B8232E41320900CBD6EE /* Assets.xcassets */,
+				19BB0C802E42947700AF151E /* ContentView.swift */,
 				1905B8242E41320900CBD6EE /* CatApp.swift */,
+				19BB0C622E4290F800AF151E /* Modules */,
+				19BB0C632E42910900AF151E /* Network */,
+				1905B8232E41320900CBD6EE /* Assets.xcassets */,
 			);
 			path = CatApp;
 			sourceTree = "<group>";
@@ -115,20 +139,11 @@
 		1905B82A2E41321200CBD6EE /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
-				1905B82E2E41323000CBD6EE /* Modifiers */,
+				19BB0C5D2E424CCC00AF151E /* Service */,
 				1905B82D2E41322900CBD6EE /* View */,
 				1905B82C2E41322300CBD6EE /* ViewModel */,
-				1905B82B2E41321D00CBD6EE /* Model */,
 			);
 			path = Breeds;
-			sourceTree = "<group>";
-		};
-		1905B82B2E41321D00CBD6EE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1905B8332E4141EC00CBD6EE /* Breed.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1905B82C2E41322300CBD6EE /* ViewModel */ = {
@@ -142,17 +157,107 @@
 		1905B82D2E41322900CBD6EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19BB0C602E42538A00AF151E /* BreedDetailSheet.swift */,
 				1905B82F2E41323E00CBD6EE /* CatListView.swift */,
 				1905B8312E4139AD00CBD6EE /* CatTileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		1905B82E2E41323000CBD6EE /* Modifiers */ = {
+		19BB0C5D2E424CCC00AF151E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */,
 			);
-			path = Modifiers;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		19BB0C622E4290F800AF151E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1905B82A2E41321200CBD6EE /* Breeds */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		19BB0C632E42910900AF151E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C642E42916700AF151E /* Data */,
+				19BB0C652E42916C00AF151E /* Domain */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		19BB0C642E42916700AF151E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C672E42918A00AF151E /* API */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		19BB0C652E42916C00AF151E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C7C2E42930600AF151E /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		19BB0C672E42918A00AF151E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C682E42918F00AF151E /* APIConstants.swift */,
+				19BB0C6A2E4291A700AF151E /* Network */,
+				19BB0C722E42924300AF151E /* Parser */,
+				19BB0C752E42927400AF151E /* Request */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		19BB0C6A2E4291A700AF151E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C6F2E42920400AF151E /* RequestManager.swift */,
+				19BB0C6D2E4291EE00AF151E /* NetworkError.swift */,
+				19BB0C6B2E4291BA00AF151E /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		19BB0C722E42924300AF151E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C732E42924B00AF151E /* DataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		19BB0C752E42927400AF151E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C7A2E4292C900AF151E /* RequestProtocol.swift */,
+				19BB0C782E4292BB00AF151E /* RequestType.swift */,
+				19BB0C762E42928400AF151E /* CatsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		19BB0C7C2E42930600AF151E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C7D2E42930B00AF151E /* Cat */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19BB0C7D2E42930B00AF151E /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				19BB0C7E2E42931700AF151E /* Cat.swift */,
+			);
+			path = Cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,11 +402,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1905B8342E4141F300CBD6EE /* Breed.swift in Sources */,
+				19BB0C612E42539200AF151E /* BreedDetailSheet.swift in Sources */,
+				19BB0C742E42924E00AF151E /* DataParser.swift in Sources */,
+				19BB0C812E42947B00AF151E /* ContentView.swift in Sources */,
+				19BB0C5F2E424CE400AF151E /* CatAPIService.swift in Sources */,
+				19BB0C6C2E4291BE00AF151E /* APIManager.swift in Sources */,
 				1905B8302E41324000CBD6EE /* CatListView.swift in Sources */,
+				19BB0C692E42919400AF151E /* APIConstants.swift in Sources */,
+				19BB0C772E42928700AF151E /* CatsRequest.swift in Sources */,
 				1905B8322E4139AD00CBD6EE /* CatTileView.swift in Sources */,
+				19BB0C7B2E4292CD00AF151E /* RequestProtocol.swift in Sources */,
+				19BB0C792E4292BF00AF151E /* RequestType.swift in Sources */,
+				19BB0C702E42920700AF151E /* RequestManager.swift in Sources */,
+				19BB0C7F2E42931800AF151E /* Cat.swift in Sources */,
 				1905B8272E41320900CBD6EE /* CatApp.swift in Sources */,
 				1905B8362E41439D00CBD6EE /* BreedListViewModel.swift in Sources */,
+				19BB0C6E2E4291F100AF151E /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
