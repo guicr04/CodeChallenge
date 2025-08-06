@@ -8,68 +8,31 @@ struct CatListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Search Bar
-                TextField("Search", text: $viewModel.searchText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-
-                // Grid of cat tiles
-                ScrollView {
-                    LazyVGrid(
-                        columns :[
-                            GridItem(.flexible()),
-                            GridItem(.flexible()),
-                            GridItem(.flexible())
-                        ],
-                        spacing: 12
-                    ) {
-                        ForEach(viewModel.filteredBreeds, id: \.id) { breed in
-                            CatTileView(
-                                breed: breed,
-                                isFavourite: viewModel.favourites.contains(breed.id),
-                                toggleFavourite: {
-                                    viewModel.toggleFavourite(breed: breed)
-                                }
-                            )
-                            .onTapGesture{
-                                selectedBreed = breed
-                            }
-                        }
+                Group {
+                    switch viewModel.currentTab {
+                    case .list:
+                        CatListContent(viewModel: viewModel, selectedBreed: $selectedBreed)
+                    case .favourites:
+                        FavouritesView(viewModel: viewModel)
                     }
-                        .padding(.horizontal, 16)
                 }
-
-                // Tab bar
-                HStack {
-                    Spacer()
-                    Text("Cats list")
-                        .fontWeight(.bold)
-                    Spacer()
-                    Spacer()
-                    Text("Favourites")
-                    Spacer()
+                .navigationTitle("Cats App")
+                .sheet(item: $selectedBreed) { breed in
+                    BreedDetailSheet(
+                        breed: breed,
+                        isFavourite: viewModel.favourites.contains(breed.id),
+                        toggleFavourite: {
+                            viewModel.toggleFavourite(breed: breed)
+                        }
+                    )
                 }
-                .padding()
-                .background(Color.black)
-                .foregroundColor(.white)
             }
             .task {
                 await viewModel.fetchBreeds()
             }
-            .navigationTitle("Cats App")
-            .sheet(item: $selectedBreed) { breed in
-                BreedDetailSheet(
-                    breed: breed,
-                    isFavourite: viewModel.favourites.contains(breed.id),
-                    toggleFavourite: {
-                        viewModel.toggleFavourite(breed: breed)
-                    }
-                )
-            }
         }
     }
 }
-
 #Preview {
     CatListView()
 }

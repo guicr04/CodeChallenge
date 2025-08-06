@@ -5,6 +5,7 @@ protocol CatsFetcher {
     func fetchBreeds(page: Int) async -> [Cat]
 }
 
+
 @MainActor
 class BreedListViewModel: ObservableObject {
     @Published var breeds: [Cat] = []
@@ -22,14 +23,33 @@ class BreedListViewModel: ObservableObject {
     }
     
     var filteredBreeds: [Cat] {
+        let validBreeds = breeds.filter { $0.image?.url != nil} // just cats with a valid url will be shown
         if searchText.isEmpty {
-            return breeds
+            return validBreeds
         } else {
             return breeds.filter {
-                ($0.name ?? "").lowercased().contains(searchText.lowercased())
+                ($0.name ?? "").lowercased().contains(searchText.lowercased()) // filter cats by the words on the searchbar 
             }
         }
     }
+    
+    var averageFavouriteLifespan: Double {
+        let lifespans = breeds
+            .filter { favourites.contains($0.id) }
+            .compactMap { $0.lifeSpan } // ex: "12 - 15"
+            .compactMap { $0.components(separatedBy: " - ").first } // just the lower value
+            .compactMap { Double($0.trimmingCharacters(in: .whitespaces)) }
+
+        guard !lifespans.isEmpty else { return 0 }
+        let sum = lifespans.reduce(0, +)
+        return sum / Double(lifespans.count)
+    }
+    
+    enum Tab {
+        case list
+        case favourites
+    }
+    @Published var currentTab: Tab = .list
 }
 
 extension BreedListViewModel {
