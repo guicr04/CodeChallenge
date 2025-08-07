@@ -52,7 +52,8 @@ struct CatListContent: View {
                 Spacer()
                 Button("Favourites") {
                     viewModel.currentTab = .favourites
-                }
+                }.accessibilityIdentifier("favouritesTab")
+                
                 Spacer()
             }
             .padding()

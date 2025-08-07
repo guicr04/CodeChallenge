@@ -33,6 +33,3 @@ struct CatListView: View {
         }
     }
 }
-#Preview {
-    CatListView()
-}

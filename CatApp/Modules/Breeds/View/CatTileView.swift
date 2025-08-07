@@ -34,6 +34,7 @@ struct CatTileView: View {
                             .foregroundColor(isFavourite ? .black: .white.opacity(0.5))
                             .padding(6)
                 }
+                .accessibilityIdentifier("favouriteButton")
             }
             Text(breed.name!)
                 .font(.caption)
@@ -41,8 +42,11 @@ struct CatTileView: View {
                 .lineLimit(2)
                 .frame(maxWidth: .infinity, minHeight: 20, alignment: .top) //reserve space for 2 lines
                 .padding(.top, 4)
+                .accessibilityIdentifier("catTile")
         }
+        .accessibilityIdentifier("catTile")
         .frame(height: 120) // ✅ force consistent tile height
         .padding(5)
     }
+        
 }

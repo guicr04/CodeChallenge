@@ -22,6 +22,7 @@ struct FavouritesView: View {
                             .foregroundColor(.gray)
                         Text("No favourites yet")
                             .font(.headline)
+                            .accessibilityIdentifier("noFavouritesText")
                         Text("Mark a cat as favourite to view it here.")
                             .font(.subheadline)
                             .foregroundColor(.gray)
@@ -45,6 +46,7 @@ struct FavouritesView: View {
                                     viewModel.toggleFavourite(breed: breed)
                                 }
                             )
+                            .accessibilityIdentifier("catTile_\(breed.id ?? "unknown")")
                             .onTapGesture {
                                 selectedBreed = breed
                             }
@@ -66,6 +68,7 @@ struct FavouritesView: View {
                 Spacer()
                 Text("Favourites")
                     .fontWeight(.bold)
+                    .accessibilityIdentifier("favouritesTab") //Identifier for tests
                 Spacer()
             }
             .padding()

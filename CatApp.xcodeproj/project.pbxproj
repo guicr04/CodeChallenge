@@ -14,6 +14,15 @@
 		1905B8362E41439D00CBD6EE /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905B8352E41439300CBD6EE /* BreedListViewModel.swift */; };
 		19430C8E2E43D2AB0064A4D2 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430C8D2E43D2A60064A4D2 /* FavouritesView.swift */; };
 		19430C902E43D3900064A4D2 /* CatListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430C8F2E43D38A0064A4D2 /* CatListContent.swift */; };
+		19430C992E43E2400064A4D2 /* CatModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19430C972E43E2400064A4D2 /* CatModel.xcdatamodeld */; };
+		19430CD32E43E54D0064A4D2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430CD22E43E54A0064A4D2 /* Persistence.swift */; };
+		19430E252E43F1D90064A4D2 /* CatStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430E242E43F1D30064A4D2 /* CatStorageService.swift */; };
+		19430E282E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430E272E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift */; };
+		19430E292E43F2870064A4D2 /* CatEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430E262E43F2870064A4D2 /* CatEntity+CoreDataClass.swift */; };
+		19430E2A2E43F2870064A4D2 /* CatEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430E262E43F2870064A4D2 /* CatEntity+CoreDataClass.swift */; };
+		19430E2B2E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19430E272E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift */; };
+		198856B72E450A77007731F3 /* CatsFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198856B62E450A6F007731F3 /* CatsFetcherMock.swift */; };
+		198856D62E451D58007731F3 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 198856D52E451D58007731F3 /* ViewInspector */; };
 		19BB0C5F2E424CE400AF151E /* CatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */; };
 		19BB0C612E42539200AF151E /* BreedDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C602E42538A00AF151E /* BreedDetailSheet.swift */; };
 		19BB0C692E42919400AF151E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0C682E42918F00AF151E /* APIConstants.swift */; };
@@ -56,6 +65,12 @@
 		1905B8352E41439300CBD6EE /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		19430C8D2E43D2A60064A4D2 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		19430C8F2E43D38A0064A4D2 /* CatListContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListContent.swift; sourceTree = "<group>"; };
+		19430C982E43E2400064A4D2 /* CatModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatModel.xcdatamodel; sourceTree = "<group>"; };
+		19430CD22E43E54A0064A4D2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		19430E242E43F1D30064A4D2 /* CatStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatStorageService.swift; sourceTree = "<group>"; };
+		19430E262E43F2870064A4D2 /* CatEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CatEntity+CoreDataClass.swift"; path = "CatApp/Persistence/CoreData/CatEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19430E272E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CatEntity+CoreDataProperties.swift"; path = "CatApp/Persistence/CoreData/CatEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		198856B62E450A6F007731F3 /* CatsFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsFetcherMock.swift; sourceTree = "<group>"; };
 		19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIService.swift; sourceTree = "<group>"; };
 		19BB0C602E42538A00AF151E /* BreedDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailSheet.swift; sourceTree = "<group>"; };
 		19BB0C682E42918F00AF151E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -95,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198856D62E451D58007731F3 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +127,8 @@
 		1905B7EC2E412B7500CBD6EE = {
 			isa = PBXGroup;
 			children = (
+				19430E262E43F2870064A4D2 /* CatEntity+CoreDataClass.swift */,
+				19430E272E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift */,
 				1905B8262E41320900CBD6EE /* CatApp */,
 				1905B8052E412B7600CBD6EE /* CatAppTests */,
 				1905B80F2E412B7600CBD6EE /* CatAppUITests */,
@@ -131,6 +149,7 @@
 		1905B8262E41320900CBD6EE /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
+				19430C962E43E2010064A4D2 /* Persistence */,
 				19BB0C802E42947700AF151E /* ContentView.swift */,
 				1905B8242E41320900CBD6EE /* CatApp.swift */,
 				19BB0C622E4290F800AF151E /* Modules */,
@@ -170,9 +189,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		19430C962E43E2010064A4D2 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				19430CD22E43E54A0064A4D2 /* Persistence.swift */,
+				19430C972E43E2400064A4D2 /* CatModel.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		19BB0C5D2E424CCC00AF151E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				198856B62E450A6F007731F3 /* CatsFetcherMock.swift */,
+				19430E242E43F1D30064A4D2 /* CatStorageService.swift */,
 				19BB0C5E2E424CDC00AF151E /* CatAPIService.swift */,
 			);
 			path = Service;
@@ -306,6 +336,7 @@
 			);
 			name = CatAppTests;
 			packageProductDependencies = (
+				198856D52E451D58007731F3 /* ViewInspector */,
 			);
 			productName = CatAppTests;
 			productReference = 1905B8022E412B7600CBD6EE /* CatAppTests.xctest */;
@@ -366,6 +397,9 @@
 			);
 			mainGroup = 1905B7EC2E412B7500CBD6EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				198856D42E451D58007731F3 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1905B7F62E412B7500CBD6EE /* Products */;
 			projectDirPath = "";
@@ -414,8 +448,11 @@
 				19430C8E2E43D2AB0064A4D2 /* FavouritesView.swift in Sources */,
 				19BB0C812E42947B00AF151E /* ContentView.swift in Sources */,
 				19BB0C5F2E424CE400AF151E /* CatAPIService.swift in Sources */,
+				198856B72E450A77007731F3 /* CatsFetcherMock.swift in Sources */,
 				19BB0C6C2E4291BE00AF151E /* APIManager.swift in Sources */,
+				19430C992E43E2400064A4D2 /* CatModel.xcdatamodeld in Sources */,
 				1905B8302E41324000CBD6EE /* CatListView.swift in Sources */,
+				19430CD32E43E54D0064A4D2 /* Persistence.swift in Sources */,
 				19BB0C692E42919400AF151E /* APIConstants.swift in Sources */,
 				19BB0C772E42928700AF151E /* CatsRequest.swift in Sources */,
 				1905B8322E4139AD00CBD6EE /* CatTileView.swift in Sources */,
@@ -424,7 +461,10 @@
 				19BB0C702E42920700AF151E /* RequestManager.swift in Sources */,
 				19BB0C7F2E42931800AF151E /* Cat.swift in Sources */,
 				1905B8272E41320900CBD6EE /* CatApp.swift in Sources */,
+				19430E2A2E43F2870064A4D2 /* CatEntity+CoreDataClass.swift in Sources */,
+				19430E2B2E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift in Sources */,
 				1905B8362E41439D00CBD6EE /* BreedListViewModel.swift in Sources */,
+				19430E252E43F1D90064A4D2 /* CatStorageService.swift in Sources */,
 				19BB0C6E2E4291F100AF151E /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19430E282E43F2870064A4D2 /* CatEntity+CoreDataProperties.swift in Sources */,
+				19430E292E43F2870064A4D2 /* CatEntity+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +782,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		198856D42E451D58007731F3 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		198856D52E451D58007731F3 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 198856D42E451D58007731F3 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		19430C972E43E2400064A4D2 /* CatModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19430C982E43E2400064A4D2 /* CatModel.xcdatamodel */,
+			);
+			currentVersion = 19430C982E43E2400064A4D2 /* CatModel.xcdatamodel */;
+			path = CatModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1905B7ED2E412B7500CBD6EE /* Project object */;
 }

@@ -1,6 +1,5 @@
 typealias Cats = [Cat]
 
-// MARK: - Cat
 
 struct Cat: Decodable, Identifiable {
   let weight: Weight?
@@ -42,22 +41,16 @@ struct Cat: Decodable, Identifiable {
   let image: CatImage?
 }
 
-// MARK: - Weight
-
 struct Weight: Decodable {
   let imperial: String?
   let metric: String?
 }
-
-// MARK: - CatImage
 
 struct CatImage: Decodable {
     let id: String?
     let width, height: Int?
     let url: String?
 }
-
-// MARK: - Hashable
 
 extension Cat: Hashable {
   func hash(into hasher: inout Hasher) {
@@ -67,4 +60,48 @@ extension Cat: Hashable {
   static func == (lhs: Cat, rhs: Cat) -> Bool {
     lhs.id == rhs.id
   }
+}
+
+
+extension Cat {
+    init(from entity: CatEntity) {
+        self.weight = nil
+        self.id = entity.id
+        self.name = entity.name
+        self.cfaURL = nil
+        self.vetstreetURL = nil
+        self.vcahospitalsURL = nil
+        self.temperament = entity.temperament
+        self.origin = entity.origin
+        self.countryCodes = nil
+        self.countryCode = nil
+        self.description = entity.desc
+        self.lifeSpan = nil
+        self.indoor = nil
+        self.lap = nil
+        self.altNames = nil
+        self.adaptability = nil
+        self.affectionLevel = nil
+        self.childFriendly = nil
+        self.dogFriendly = nil
+        self.energyLevel = nil
+        self.grooming = nil
+        self.healthIssues = nil
+        self.intelligence = nil
+        self.sheddingLevel = nil
+        self.socialNeeds = nil
+        self.strangerFriendly = nil
+        self.vocalisation = nil
+        self.experimental = nil
+        self.hairless = nil
+        self.natural = nil
+        self.rare = nil
+        self.rex = nil
+        self.suppressedTail = nil
+        self.shortLegs = nil
+        self.wikipediaURL = nil
+        self.hypoallergenic = nil
+        self.referenceImageID = nil
+        self.image = CatImage(id: nil, width: nil, height: nil, url: entity.imageURL)
+    }
 }

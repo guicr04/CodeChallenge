@@ -16,10 +16,14 @@ class BreedListViewModel: ObservableObject {
     
     private let catsFetcher: CatsFetcher
     private(set) var page = 0
+    private let storageService = CatStorageService()
     
-    init(isLoadind: Bool = false, catsFetcher: CatsFetcher) {
+    init(isLoadind: Bool = false, catsFetcher: CatsFetcher, storageService: CatStorageService = CatStorageService()) {
         self.isLoading = isLoadind
         self.catsFetcher = catsFetcher
+        
+        // fetch favourites from CoreData
+        self.favourites = storageService.fetchFavouriteCatIDs()
     }
     
     var filteredBreeds: [Cat] {
@@ -58,9 +62,16 @@ extension BreedListViewModel {
         guard !isLoading else { return }
         
         isLoading = true
+
         let newBreeds = await catsFetcher.fetchBreeds(page: page)
-        
-        breeds += newBreeds
+        if newBreeds.isEmpty {
+            // fallback to offline
+            let localEntities = storageService.fetchAllCats()
+            self.breeds = localEntities.map { Cat(from: $0) }
+        } else {
+            self.breeds += newBreeds
+            storageService.saveCats(newBreeds)
+        }
         hasMoreBreeds = !newBreeds.isEmpty
         isLoading = false
     }
@@ -76,6 +87,10 @@ extension BreedListViewModel {
             favourites.remove(breed.id)
         } else {
             favourites.insert(breed.id)
+        }
+        
+        if let id = breed.id {
+            storageService.updateFavourites(for: id)
         }
         
     }

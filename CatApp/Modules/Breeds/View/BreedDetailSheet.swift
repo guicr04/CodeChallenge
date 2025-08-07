@@ -21,6 +21,7 @@ struct BreedDetailSheet: View {
                         .foregroundColor(isFavourite ? .black : .gray)
                         .padding()
                 }
+                .accessibilityIdentifier("favouriteButton")
             }
             
             if let urlString = breed.image?.url, let url = URL(string: urlString) {
